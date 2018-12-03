@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+:root {
+    --link-color: hotpink;
+    --blue-color: blue;
+    --green-color: green;
+  }
+  
+  [data-theme^="light"],
+  [data-theme] [data-theme^="light"] {
+    --main-color: rgb(40, 44, 52);
+    --background-color: #fff;
+    --box-color: lightgrey;
+  }
+  
+  [data-theme^="dark"],
+  [data-theme] [data-theme^="dark"],
+  [data-theme="light-dark-sidebar"] nav {
+    --blue-color: #1da1f2;
+    --yellow-color:rgb(226, 192, 141);
+    --main-color: #fff;
+    --background-color: rgb(40, 44, 52);
+    --sidebar-color: rgb(33, 37, 43);
+    --box-color: grey;
+  }
+  
+
+  
+
+  body {
+    color: var(--main-color);
+    font-family: sans-serif;
+    background-color: var(--background-color);
+
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  
+  .color-blue { color: var(--blue-color) }
+  .color-green { color: var(--green-color) }
+  
+
+
+ ul li {
+    list-style: none;
+  }
+  
+  .activeFolder{
+    position: top right;
+  }
+
+
+
+body {
+  margin: 0;
+}
+
+.box {
+  padding: 1em;
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid #f2f2f2;
+}
+
+
+
+/* Our Grid Code */
+
+.app-layout {
+  display: grid;
+  height: 100vh;
+  grid-template-columns:  30% 70%;
+  grid-template-rows: auto auto  1fr  auto;
+}
+
+
+
+
+.side {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  color: var(--yellow-color);
+  padding: 2em;
+  background-color: var(--sidebar-color);
+}
+
+.activeFolder{
+  position: absolute;
+  text-align: right;
+  right:15;
+  top: 5px;
+
+}
+
+
+
+.folder {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 0 1em;
+  overflow-y: scroll;
+  
+}
+.root {
+  grid-column: 2;
+  grid-row: 1;
+  color: #e06c75;
+  position: relative;
+}
+
+.input {
+  grid-column: 2;
+  grid-row: 3 ;
+}

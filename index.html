@@ -1,0 +1,50 @@
+
+  <html>
+    <head>
+      <link rel="stylesheet" href="./style.css"/>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-YIyAArzQv8q6Av1kr9cwxHhFcfNBUaolJindR2XO8E3OLp6z3d8My3oWLd33ET7M" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/light.css" integrity="sha384-33RmjeesW9BZ4wR2Gm3n4iBXOvGTto4znqL2kZleiRanWDxM59IHIq5RsbRioqxb" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-srL3Qh9R/n855m4o5fegS//B2q0R1md7z6ndDYaPj8iEp0j0IuKdFVWMY0JosKPF" crossorigin="anonymous"><script>
+        document.documentElement.setAttribute(
+          'data-theme',
+          localStorage.theme || 'dark'
+        )
+      </script>
+    </head>
+    <body>
+        <div class='app-layout'>
+      <div class="side box">     
+         <nav>
+        <!-- <p>
+            <button data-set-theme="dark">Dark</button>
+            <button data-set-theme="light">Light</button>
+            <button data-set-theme="light-dark-sidebar">Light (dark sidebar)</button>
+          </p> -->
+      </nav>
+    </div>
+
+           
+    <div id="folderRoot" class="root box">
+         
+    </div>
+    <div class="activeFolder box">test</div>    
+            <div class="folder box">
+               
+            <folder></folder>
+            
+          </div>
+          
+          <div class='input box'>
+              <input type='text' id="test" placeholder='search'>
+            </div>
+      
+        
+     
+      </div>
+      <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+      </script>
+    </body>
+  </html>
+  
